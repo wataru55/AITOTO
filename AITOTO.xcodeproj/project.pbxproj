@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63708C2B2C5A2EAC0045BBFB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C2A2C5A2EAC0045BBFB /* MenuView.swift */; };
 		63DA88512C4A1910000D936B /* AITOTOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA88502C4A1910000D936B /* AITOTOApp.swift */; };
 		63DA88532C4A1910000D936B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA88522C4A1910000D936B /* ContentView.swift */; };
 		63DA88552C4A1911000D936B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63DA88542C4A1911000D936B /* Assets.xcassets */; };
@@ -19,7 +20,7 @@
 		63DA886B2C4CD44F000D936B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 63DA886A2C4CD44F000D936B /* FirebaseStorage */; };
 		63DA886E2C4CD592000D936B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA886D2C4CD592000D936B /* AuthService.swift */; };
 		63DA88712C4CD685000D936B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA88702C4CD685000D936B /* User.swift */; };
-		63DA88742C4CD781000D936B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA88732C4CD781000D936B /* MainTabView.swift */; };
+		63DA88742C4CD781000D936B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA88732C4CD781000D936B /* MainView.swift */; };
 		63DA88792C4CD7F0000D936B /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA88782C4CD7F0000D936B /* ContentViewModel.swift */; };
 		63DA887C2C4CDA1E000D936B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA887B2C4CDA1E000D936B /* LoginView.swift */; };
 		63DA887F2C4CDA58000D936B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA887E2C4CDA58000D936B /* LoginViewModel.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63708C2A2C5A2EAC0045BBFB /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		63DA884D2C4A1910000D936B /* AITOTO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AITOTO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DA88502C4A1910000D936B /* AITOTOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITOTOApp.swift; sourceTree = "<group>"; };
 		63DA88522C4A1910000D936B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,7 +44,7 @@
 		63DA88612C4CD374000D936B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		63DA886D2C4CD592000D936B /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		63DA88702C4CD685000D936B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		63DA88732C4CD781000D936B /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		63DA88732C4CD781000D936B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		63DA88782C4CD7F0000D936B /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		63DA887B2C4CDA1E000D936B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		63DA887E2C4CDA58000D936B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -141,7 +143,8 @@
 		63DA88722C4CD6CC000D936B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				63DA88732C4CD781000D936B /* MainTabView.swift */,
+				63DA88732C4CD781000D936B /* MainView.swift */,
+				63708C2A2C5A2EAC0045BBFB /* MenuView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,12 +293,13 @@
 				63DA888C2C4CDBEB000D936B /* IGTextFieldModifier.swift in Sources */,
 				63DA88832C4CDAF5000D936B /* AddEmailView.swift in Sources */,
 				63DA887F2C4CDA58000D936B /* LoginViewModel.swift in Sources */,
+				63708C2B2C5A2EAC0045BBFB /* MenuView.swift in Sources */,
 				63DA88892C4CDB49000D936B /* CompleteSignUpView.swift in Sources */,
 				63DA88532C4A1910000D936B /* ContentView.swift in Sources */,
 				63DA888E2C4CDF9E000D936B /* UserService.swift in Sources */,
 				63DA88872C4CDB2E000D936B /* CreatePasswordView.swift in Sources */,
 				63DA88512C4A1910000D936B /* AITOTOApp.swift in Sources */,
-				63DA88742C4CD781000D936B /* MainTabView.swift in Sources */,
+				63DA88742C4CD781000D936B /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
