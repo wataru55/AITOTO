@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		63708C2B2C5A2EAC0045BBFB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C2A2C5A2EAC0045BBFB /* MenuView.swift */; };
+		63708C2D2C5BF3E50045BBFB /* PresentRecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C2C2C5BF3E40045BBFB /* PresentRecommendationView.swift */; };
+		63708C2F2C5C027A0045BBFB /* PresentRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C2E2C5C027A0045BBFB /* PresentRegistrationView.swift */; };
 		63DA88512C4A1910000D936B /* AITOTOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA88502C4A1910000D936B /* AITOTOApp.swift */; };
 		63DA88532C4A1910000D936B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA88522C4A1910000D936B /* ContentView.swift */; };
 		63DA88552C4A1911000D936B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63DA88542C4A1911000D936B /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		63708C2A2C5A2EAC0045BBFB /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		63708C2C2C5BF3E40045BBFB /* PresentRecommendationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentRecommendationView.swift; sourceTree = "<group>"; };
+		63708C2E2C5C027A0045BBFB /* PresentRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentRegistrationView.swift; sourceTree = "<group>"; };
 		63DA884D2C4A1910000D936B /* AITOTO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AITOTO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DA88502C4A1910000D936B /* AITOTOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITOTOApp.swift; sourceTree = "<group>"; };
 		63DA88522C4A1910000D936B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,9 +120,9 @@
 		63DA88602C4CD227000D936B /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				63DA886C2C4CD568000D936B /* Model */,
 				63DA887D2C4CDA3F000D936B /* ViewModel */,
 				63DA887A2C4CDA0E000D936B /* View */,
-				63DA886C2C4CD568000D936B /* Model */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -145,6 +149,8 @@
 			children = (
 				63DA88732C4CD781000D936B /* MainView.swift */,
 				63708C2A2C5A2EAC0045BBFB /* MenuView.swift */,
+				63708C2C2C5BF3E40045BBFB /* PresentRecommendationView.swift */,
+				63708C2E2C5C027A0045BBFB /* PresentRegistrationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 				63DA886E2C4CD592000D936B /* AuthService.swift in Sources */,
 				63DA88792C4CD7F0000D936B /* ContentViewModel.swift in Sources */,
 				63DA888C2C4CDBEB000D936B /* IGTextFieldModifier.swift in Sources */,
+				63708C2D2C5BF3E50045BBFB /* PresentRecommendationView.swift in Sources */,
 				63DA88832C4CDAF5000D936B /* AddEmailView.swift in Sources */,
 				63DA887F2C4CDA58000D936B /* LoginViewModel.swift in Sources */,
 				63708C2B2C5A2EAC0045BBFB /* MenuView.swift in Sources */,
@@ -298,6 +305,7 @@
 				63DA88532C4A1910000D936B /* ContentView.swift in Sources */,
 				63DA888E2C4CDF9E000D936B /* UserService.swift in Sources */,
 				63DA88872C4CDB2E000D936B /* CreatePasswordView.swift in Sources */,
+				63708C2F2C5C027A0045BBFB /* PresentRegistrationView.swift in Sources */,
 				63DA88512C4A1910000D936B /* AITOTOApp.swift in Sources */,
 				63DA88742C4CD781000D936B /* MainView.swift in Sources */,
 			);
