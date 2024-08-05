@@ -10,19 +10,20 @@ import PhotosUI
 
 struct PresentRegistrationView: View {
     @State private var isPickerPresented = false // Picker表示状態を管理する変数
-    @State private var selectedItem: PhotosPickerItem? = nil // 選択されたアイテム
-    @State private var selectedImage: Image? = nil // 表示するための選択された画像
-    @State private var title: String = ""
-    @State private var bio: String = ""
-    @State private var date = Date()
+
+    @StateObject var viewModel = PresentRegistrationViewModel()
 
     @Environment(\.presentationMode) var presentationMode
+
+    init() {
+        UIDatePicker.appearance().tintColor = .systemPink
+    }
 
     var body: some View {
         VStack {
             ScrollView(.vertical, showsIndicators: false) {
-                if let selectedImage = selectedImage {
-                    selectedImage
+                if let displayImage = viewModel.displayImage {
+                    displayImage
                         .resizable()
                         .scaledToFit()
                         .frame(width: 300, height: 300) // 画像のサイズを指定
@@ -30,7 +31,6 @@ struct PresentRegistrationView: View {
                         .onTapGesture(perform: {
                             isPickerPresented.toggle()
                         })
-
 
                 } else {
                     Button {
@@ -47,7 +47,7 @@ struct PresentRegistrationView: View {
 
                 DatePicker(
                     "Start Date",
-                    selection: $date,
+                    selection: $viewModel.date,
                     displayedComponents: [.date]
                 )
                 .datePickerStyle(.graphical)
@@ -55,13 +55,13 @@ struct PresentRegistrationView: View {
                 .padding(.top, 150)
                 .padding(.bottom, 30)
 
-                TextField("タイトル", text: $title)
+                TextField("タイトル", text: $viewModel.title)
                     .autocapitalization(.none) //自動的に大文字にしない
                     .modifier(IGTextFieldModifier())
                     .padding(.top, 150)
                     .padding(.bottom, 10)
 
-                TextField("メモ", text: $bio)
+                TextField("メモ", text: $viewModel.bio)
                     .autocapitalization(.none) //自動的に大文字にしない
                     .font(.subheadline)
                     .padding(12)
@@ -72,15 +72,12 @@ struct PresentRegistrationView: View {
             }//scrollView
             .photosPicker(
                 isPresented: $isPickerPresented,
-                selection: $selectedItem,
+                selection: $viewModel.selectedImage,
                 matching: .images
             )
-            .onChange(of: selectedItem) {
+            .onChange(of: viewModel.selectedImage) {
                 Task {
-                    if let data = try? await selectedItem?.loadTransferable(type: Data.self),
-                       let uiImage = UIImage(data: data) {
-                        selectedImage = Image(uiImage: uiImage)
-                    }
+                    await viewModel.loadImage(fromItem: viewModel.selectedImage)
                 }
             }
 
@@ -99,6 +96,14 @@ struct PresentRegistrationView: View {
 
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: {
+                    Task {
+                        do {
+                            try await viewModel.saveToFirestore()
+                            presentationMode.wrappedValue.dismiss()
+                        } catch {
+                            print("Error saving registration: \(error.localizedDescription)")
+                        }
+                    }
 
                 }, label: {
                     HStack{
@@ -106,7 +111,7 @@ struct PresentRegistrationView: View {
                             .resizable()
                             .frame(width: 30, height: 30)
                             .foregroundStyle(.black)
-
+                        
                         Text("登録")
                             .font(.subheadline)
                             .fontWeight(.bold)

@@ -10,6 +10,9 @@
 		63708C2B2C5A2EAC0045BBFB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C2A2C5A2EAC0045BBFB /* MenuView.swift */; };
 		63708C2D2C5BF3E50045BBFB /* PresentRecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C2C2C5BF3E40045BBFB /* PresentRecommendationView.swift */; };
 		63708C2F2C5C027A0045BBFB /* PresentRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C2E2C5C027A0045BBFB /* PresentRegistrationView.swift */; };
+		63708C312C609F740045BBFB /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C302C609F740045BBFB /* Registration.swift */; };
+		63708C352C60A6E70045BBFB /* PresentRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C342C60A6E70045BBFB /* PresentRegistrationViewModel.swift */; };
+		63708C382C60B0810045BBFB /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C372C60B0810045BBFB /* ImageUploader.swift */; };
 		63DA88512C4A1910000D936B /* AITOTOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA88502C4A1910000D936B /* AITOTOApp.swift */; };
 		63DA88532C4A1910000D936B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA88522C4A1910000D936B /* ContentView.swift */; };
 		63DA88552C4A1911000D936B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63DA88542C4A1911000D936B /* Assets.xcassets */; };
@@ -39,6 +42,9 @@
 		63708C2A2C5A2EAC0045BBFB /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		63708C2C2C5BF3E40045BBFB /* PresentRecommendationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentRecommendationView.swift; sourceTree = "<group>"; };
 		63708C2E2C5C027A0045BBFB /* PresentRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentRegistrationView.swift; sourceTree = "<group>"; };
+		63708C302C609F740045BBFB /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		63708C342C60A6E70045BBFB /* PresentRegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentRegistrationViewModel.swift; sourceTree = "<group>"; };
+		63708C372C60B0810045BBFB /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		63DA884D2C4A1910000D936B /* AITOTO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AITOTO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DA88502C4A1910000D936B /* AITOTOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITOTOApp.swift; sourceTree = "<group>"; };
 		63DA88522C4A1910000D936B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +82,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63708C332C60A6C70045BBFB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				63708C342C60A6E70045BBFB /* PresentRegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		63708C362C60B0660045BBFB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				63DA888D2C4CDF9E000D936B /* UserService.swift */,
+				63DA886D2C4CD592000D936B /* AuthService.swift */,
+				63708C372C60B0810045BBFB /* ImageUploader.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		63DA88442C4A1910000D936B = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +125,7 @@
 				63DA88602C4CD227000D936B /* Authentication */,
 				63DA88722C4CD6CC000D936B /* View */,
 				63DA886F2C4CD678000D936B /* Model */,
+				63708C362C60B0660045BBFB /* Service */,
 				63DA888A2C4CDBCC000D936B /* Modifier */,
 				63DA88542C4A1911000D936B /* Assets.xcassets */,
 				63DA88612C4CD374000D936B /* GoogleService-Info.plist */,
@@ -120,26 +145,17 @@
 		63DA88602C4CD227000D936B /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				63DA886C2C4CD568000D936B /* Model */,
 				63DA887D2C4CDA3F000D936B /* ViewModel */,
 				63DA887A2C4CDA0E000D936B /* View */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		63DA886C2C4CD568000D936B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				63DA886D2C4CD592000D936B /* AuthService.swift */,
-				63DA888D2C4CDF9E000D936B /* UserService.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		63DA886F2C4CD678000D936B /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				63DA88702C4CD685000D936B /* User.swift */,
+				63708C302C609F740045BBFB /* Registration.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +167,7 @@
 				63708C2A2C5A2EAC0045BBFB /* MenuView.swift */,
 				63708C2C2C5BF3E40045BBFB /* PresentRecommendationView.swift */,
 				63708C2E2C5C027A0045BBFB /* PresentRegistrationView.swift */,
+				63708C332C60A6C70045BBFB /* ViewModel */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +311,8 @@
 				63DA88812C4CDABD000D936B /* RegistrationViewModel.swift in Sources */,
 				63DA88852C4CDB11000D936B /* CreateUserNameView.swift in Sources */,
 				63DA887C2C4CDA1E000D936B /* LoginView.swift in Sources */,
+				63708C312C609F740045BBFB /* Registration.swift in Sources */,
+				63708C352C60A6E70045BBFB /* PresentRegistrationViewModel.swift in Sources */,
 				63DA886E2C4CD592000D936B /* AuthService.swift in Sources */,
 				63DA88792C4CD7F0000D936B /* ContentViewModel.swift in Sources */,
 				63DA888C2C4CDBEB000D936B /* IGTextFieldModifier.swift in Sources */,
@@ -302,6 +321,7 @@
 				63DA887F2C4CDA58000D936B /* LoginViewModel.swift in Sources */,
 				63708C2B2C5A2EAC0045BBFB /* MenuView.swift in Sources */,
 				63DA88892C4CDB49000D936B /* CompleteSignUpView.swift in Sources */,
+				63708C382C60B0810045BBFB /* ImageUploader.swift in Sources */,
 				63DA88532C4A1910000D936B /* ContentView.swift in Sources */,
 				63DA888E2C4CDF9E000D936B /* UserService.swift in Sources */,
 				63DA88872C4CDB2E000D936B /* CreatePasswordView.swift in Sources */,
