@@ -46,6 +46,7 @@ struct CreateUserNameView: View {
                     .cornerRadius(12)
                     .padding(.top)
             }
+            .shadow(color: .black.opacity(0.7), radius: 2, x: 0, y: 2)
 
             Spacer()//上に押し上げる
         }//vstack

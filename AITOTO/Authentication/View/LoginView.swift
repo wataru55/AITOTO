@@ -26,10 +26,9 @@ struct LoginView: View {
 
                 VStack (spacing: 15){
                     TextField("電子メールを入力", text: $viewModel.email)
-                        .autocapitalization(.none) //自動的に大文字にしない
                         .modifier(IGTextFieldModifier())
-
-                    TextField("パスワードを入力", text: $viewModel.password)
+                    
+                    SecureField("パスワードを入力", text: $viewModel.password)
                         .modifier(IGTextFieldModifier())
                 } //Vstack
 
@@ -58,6 +57,7 @@ struct LoginView: View {
                         .cornerRadius(12)
                         .padding(.top)
                 })
+                .shadow(color: .black.opacity(0.7), radius: 2, x: 0, y: 2)
 
                 Spacer()
 

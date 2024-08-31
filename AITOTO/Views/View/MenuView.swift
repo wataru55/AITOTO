@@ -23,7 +23,8 @@ struct MenuView: View {
                     }
                 }
             ZStack {
-                Color.white
+                Color
+                    .white
                     .cornerRadius(20.0)
                     .ignoresSafeArea(edges: .bottom)
 
@@ -49,6 +50,7 @@ struct MenuView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                     })
                     .padding(.top, 30)
+                    .shadow(color: .black.opacity(0.7), radius: 2, x: 0, y: 3)
 
                     Button(action: {
 
@@ -71,6 +73,7 @@ struct MenuView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                     })
                     .padding(.top, 10)
+                    .shadow(color: .black.opacity(0.7), radius: 2, x: 0, y: 3)
 
                     Button(action: {
 
@@ -93,6 +96,7 @@ struct MenuView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                     })
                     .padding(.top, 10)
+                    .shadow(color: .black.opacity(0.7), radius: 2, x: 0, y: 3)
 
                     Button(action: {
 
@@ -115,8 +119,10 @@ struct MenuView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                     })
                     .padding(.top, 10)
+                    .shadow(color: .black.opacity(0.7), radius: 2, x: 0, y: 3)
 
                     Spacer()
+
 
                     Button(action: {
                         AuthService.shared.signout()
@@ -130,6 +136,7 @@ struct MenuView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     })
                     .padding(.top, 40)
+                    .shadow(color: .black.opacity(0.7), radius: 2, x: 0, y: 3)
                 }//vstack
                 .frame(width: UIScreen.main.bounds.width * 2 / 3, height: UIScreen.main.bounds.height - 100)
             }//zstack

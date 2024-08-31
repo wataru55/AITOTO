@@ -12,7 +12,15 @@
 		63708C2F2C5C027A0045BBFB /* PresentRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C2E2C5C027A0045BBFB /* PresentRegistrationView.swift */; };
 		63708C312C609F740045BBFB /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C302C609F740045BBFB /* Registration.swift */; };
 		63708C352C60A6E70045BBFB /* PresentRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C342C60A6E70045BBFB /* PresentRegistrationViewModel.swift */; };
-		63708C382C60B0810045BBFB /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C372C60B0810045BBFB /* ImageUploader.swift */; };
+		63708C382C60B0810045BBFB /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C372C60B0810045BBFB /* ImageLoader.swift */; };
+		63708C3C2C65E7A20045BBFB /* ListRegistrationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C3B2C65E7A20045BBFB /* ListRegistrationItemView.swift */; };
+		63708C3E2C65E7CB0045BBFB /* IconRegistrationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C3D2C65E7CB0045BBFB /* IconRegistrationItemView.swift */; };
+		63708C402C65E7E80045BBFB /* RegistrationItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C3F2C65E7E80045BBFB /* RegistrationItemViewModel.swift */; };
+		63708C422C65F69E0045BBFB /* PresentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C412C65F69E0045BBFB /* PresentInfoView.swift */; };
+		63708C452C6678070045BBFB /* Colorful in Frameworks */ = {isa = PBXBuildFile; productRef = 63708C442C6678070045BBFB /* Colorful */; };
+		63708C482C6679360045BBFB /* ColorfulX in Frameworks */ = {isa = PBXBuildFile; productRef = 63708C472C6679360045BBFB /* ColorfulX */; };
+		6383E82A2C7970290048A52F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383E8292C7970290048A52F /* ColorExtension.swift */; };
+		6383E8392C7D4AE20048A52F /* PresentInfoEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383E8382C7D4AE20048A52F /* PresentInfoEditView.swift */; };
 		63DA88512C4A1910000D936B /* AITOTOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA88502C4A1910000D936B /* AITOTOApp.swift */; };
 		63DA88532C4A1910000D936B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA88522C4A1910000D936B /* ContentView.swift */; };
 		63DA88552C4A1911000D936B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63DA88542C4A1911000D936B /* Assets.xcassets */; };
@@ -44,7 +52,14 @@
 		63708C2E2C5C027A0045BBFB /* PresentRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentRegistrationView.swift; sourceTree = "<group>"; };
 		63708C302C609F740045BBFB /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		63708C342C60A6E70045BBFB /* PresentRegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentRegistrationViewModel.swift; sourceTree = "<group>"; };
-		63708C372C60B0810045BBFB /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		63708C372C60B0810045BBFB /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		63708C3B2C65E7A20045BBFB /* ListRegistrationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegistrationItemView.swift; sourceTree = "<group>"; };
+		63708C3D2C65E7CB0045BBFB /* IconRegistrationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRegistrationItemView.swift; sourceTree = "<group>"; };
+		63708C3F2C65E7E80045BBFB /* RegistrationItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationItemViewModel.swift; sourceTree = "<group>"; };
+		63708C412C65F69E0045BBFB /* PresentInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentInfoView.swift; sourceTree = "<group>"; };
+		6383E8292C7970290048A52F /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		6383E82D2C798A760048A52F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6383E8382C7D4AE20048A52F /* PresentInfoEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentInfoEditView.swift; sourceTree = "<group>"; };
 		63DA884D2C4A1910000D936B /* AITOTO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AITOTO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DA88502C4A1910000D936B /* AITOTOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITOTOApp.swift; sourceTree = "<group>"; };
 		63DA88522C4A1910000D936B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,8 +88,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				63DA88652C4CD44F000D936B /* FirebaseAuth in Frameworks */,
+				63708C482C6679360045BBFB /* ColorfulX in Frameworks */,
 				63DA886B2C4CD44F000D936B /* FirebaseStorage in Frameworks */,
 				63DA88672C4CD44F000D936B /* FirebaseFirestore in Frameworks */,
+				63708C452C6678070045BBFB /* Colorful in Frameworks */,
 				63DA88692C4CD44F000D936B /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				63708C342C60A6E70045BBFB /* PresentRegistrationViewModel.swift */,
+				63708C3F2C65E7E80045BBFB /* RegistrationItemViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -95,9 +113,31 @@
 			children = (
 				63DA888D2C4CDF9E000D936B /* UserService.swift */,
 				63DA886D2C4CD592000D936B /* AuthService.swift */,
-				63708C372C60B0810045BBFB /* ImageUploader.swift */,
+				63708C372C60B0810045BBFB /* ImageLoader.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		6383E82B2C797F070048A52F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63DA88732C4CD781000D936B /* MainView.swift */,
+				63708C2A2C5A2EAC0045BBFB /* MenuView.swift */,
+				63708C2C2C5BF3E40045BBFB /* PresentRecommendationView.swift */,
+				63708C2E2C5C027A0045BBFB /* PresentRegistrationView.swift */,
+				63708C412C65F69E0045BBFB /* PresentInfoView.swift */,
+				6383E8382C7D4AE20048A52F /* PresentInfoEditView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6383E82C2C797F200048A52F /* Conpornents */ = {
+			isa = PBXGroup;
+			children = (
+				63708C3D2C65E7CB0045BBFB /* IconRegistrationItemView.swift */,
+				63708C3B2C65E7A20045BBFB /* ListRegistrationItemView.swift */,
+			);
+			path = Conpornents;
 			sourceTree = "<group>";
 		};
 		63DA88442C4A1910000D936B = {
@@ -120,13 +160,14 @@
 		63DA884F2C4A1910000D936B /* AITOTO */ = {
 			isa = PBXGroup;
 			children = (
+				6383E82D2C798A760048A52F /* Info.plist */,
 				63DA88502C4A1910000D936B /* AITOTOApp.swift */,
 				63DA88752C4CD7C1000D936B /* Root */,
 				63DA88602C4CD227000D936B /* Authentication */,
-				63DA88722C4CD6CC000D936B /* View */,
+				63DA88722C4CD6CC000D936B /* Views */,
 				63DA886F2C4CD678000D936B /* Model */,
 				63708C362C60B0660045BBFB /* Service */,
-				63DA888A2C4CDBCC000D936B /* Modifier */,
+				63DA888A2C4CDBCC000D936B /* Custom */,
 				63DA88542C4A1911000D936B /* Assets.xcassets */,
 				63DA88612C4CD374000D936B /* GoogleService-Info.plist */,
 				63DA88562C4A1911000D936B /* Preview Content */,
@@ -160,16 +201,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		63DA88722C4CD6CC000D936B /* View */ = {
+		63DA88722C4CD6CC000D936B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				63DA88732C4CD781000D936B /* MainView.swift */,
-				63708C2A2C5A2EAC0045BBFB /* MenuView.swift */,
-				63708C2C2C5BF3E40045BBFB /* PresentRecommendationView.swift */,
-				63708C2E2C5C027A0045BBFB /* PresentRegistrationView.swift */,
+				6383E82B2C797F070048A52F /* View */,
+				6383E82C2C797F200048A52F /* Conpornents */,
 				63708C332C60A6C70045BBFB /* ViewModel */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		63DA88752C4CD7C1000D936B /* Root */ = {
@@ -218,12 +257,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		63DA888A2C4CDBCC000D936B /* Modifier */ = {
+		63DA888A2C4CDBCC000D936B /* Custom */ = {
 			isa = PBXGroup;
 			children = (
 				63DA888B2C4CDBEB000D936B /* IGTextFieldModifier.swift */,
+				6383E8292C7970290048A52F /* ColorExtension.swift */,
 			);
-			path = Modifier;
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +287,8 @@
 				63DA88662C4CD44F000D936B /* FirebaseFirestore */,
 				63DA88682C4CD44F000D936B /* FirebaseFirestoreSwift */,
 				63DA886A2C4CD44F000D936B /* FirebaseStorage */,
+				63708C442C6678070045BBFB /* Colorful */,
+				63708C472C6679360045BBFB /* ColorfulX */,
 			);
 			productName = AITOTO;
 			productReference = 63DA884D2C4A1910000D936B /* AITOTO.app */;
@@ -278,6 +320,8 @@
 			mainGroup = 63DA88442C4A1910000D936B;
 			packageReferences = (
 				63DA88632C4CD44F000D936B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				63708C432C6678070045BBFB /* XCRemoteSwiftPackageReference "Colorful" */,
+				63708C462C6679360045BBFB /* XCRemoteSwiftPackageReference "ColorfulX" */,
 			);
 			productRefGroup = 63DA884E2C4A1910000D936B /* Products */;
 			projectDirPath = "";
@@ -307,27 +351,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63708C402C65E7E80045BBFB /* RegistrationItemViewModel.swift in Sources */,
 				63DA88712C4CD685000D936B /* User.swift in Sources */,
 				63DA88812C4CDABD000D936B /* RegistrationViewModel.swift in Sources */,
 				63DA88852C4CDB11000D936B /* CreateUserNameView.swift in Sources */,
 				63DA887C2C4CDA1E000D936B /* LoginView.swift in Sources */,
+				63708C3E2C65E7CB0045BBFB /* IconRegistrationItemView.swift in Sources */,
 				63708C312C609F740045BBFB /* Registration.swift in Sources */,
 				63708C352C60A6E70045BBFB /* PresentRegistrationViewModel.swift in Sources */,
 				63DA886E2C4CD592000D936B /* AuthService.swift in Sources */,
 				63DA88792C4CD7F0000D936B /* ContentViewModel.swift in Sources */,
+				63708C3C2C65E7A20045BBFB /* ListRegistrationItemView.swift in Sources */,
+				6383E8392C7D4AE20048A52F /* PresentInfoEditView.swift in Sources */,
 				63DA888C2C4CDBEB000D936B /* IGTextFieldModifier.swift in Sources */,
 				63708C2D2C5BF3E50045BBFB /* PresentRecommendationView.swift in Sources */,
 				63DA88832C4CDAF5000D936B /* AddEmailView.swift in Sources */,
 				63DA887F2C4CDA58000D936B /* LoginViewModel.swift in Sources */,
 				63708C2B2C5A2EAC0045BBFB /* MenuView.swift in Sources */,
+				63708C422C65F69E0045BBFB /* PresentInfoView.swift in Sources */,
 				63DA88892C4CDB49000D936B /* CompleteSignUpView.swift in Sources */,
-				63708C382C60B0810045BBFB /* ImageUploader.swift in Sources */,
+				63708C382C60B0810045BBFB /* ImageLoader.swift in Sources */,
 				63DA88532C4A1910000D936B /* ContentView.swift in Sources */,
 				63DA888E2C4CDF9E000D936B /* UserService.swift in Sources */,
 				63DA88872C4CDB2E000D936B /* CreatePasswordView.swift in Sources */,
 				63708C2F2C5C027A0045BBFB /* PresentRegistrationView.swift in Sources */,
 				63DA88512C4A1910000D936B /* AITOTOApp.swift in Sources */,
 				63DA88742C4CD781000D936B /* MainView.swift in Sources */,
+				6383E82A2C7970290048A52F /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,9 +514,9 @@
 				DEVELOPMENT_TEAM = NQD3LAN9FK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AITOTO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
@@ -494,9 +544,9 @@
 				DEVELOPMENT_TEAM = NQD3LAN9FK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AITOTO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
@@ -537,6 +587,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		63708C432C6678070045BBFB /* XCRemoteSwiftPackageReference "Colorful" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lakr233/Colorful.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+		63708C462C6679360045BBFB /* XCRemoteSwiftPackageReference "ColorfulX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lakr233/ColorfulX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.5;
+			};
+		};
 		63DA88632C4CD44F000D936B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -548,6 +614,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		63708C442C6678070045BBFB /* Colorful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63708C432C6678070045BBFB /* XCRemoteSwiftPackageReference "Colorful" */;
+			productName = Colorful;
+		};
+		63708C472C6679360045BBFB /* ColorfulX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63708C462C6679360045BBFB /* XCRemoteSwiftPackageReference "ColorfulX" */;
+			productName = ColorfulX;
+		};
 		63DA88642C4CD44F000D936B /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 63DA88632C4CD44F000D936B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

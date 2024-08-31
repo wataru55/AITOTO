@@ -14,17 +14,13 @@ struct UserService {
         return try snapshot.data(as: User.self) //snapshotからUser型にデータをデコードして値を返す
     }
 
-    static func fetchWaitingUsers(_ userIds: [String]) async throws -> [User] {
-        var users = [User]()
+    static func fetchRegistrationsDocuments(withUid uid: String) async throws -> [Registration] {
 
-        for userId in userIds {
-            let docRef = Firestore.firestore().collection("users").document(userId)
-            let document = try await docRef.getDocument()
+        let snapshot = try await Firestore.firestore().collection("users").document(uid).collection("registrations").getDocuments()
 
-            if let user = try? document.data(as: User.self) {
-                users.append(user)
-            }
+        let registrations = snapshot.documents.compactMap { document -> Registration? in
+            try? document.data(as: Registration.self)
         }
-        return users
+        return registrations
     }
 }

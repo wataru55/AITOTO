@@ -15,11 +15,10 @@ struct Registration: Identifiable, Hashable, Codable {
     let date: String
     var title: String
     var bio: String?
-
 }
 
 extension Registration {
     static var MOCK_REGISTRATIONS: [Registration] = [
-        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString,imageURL: "logo", date: "2024-08-05", title: "a")
+        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString,imageURL: "logo", date: "2024-08-05", title: "大好きなクマちゃん")
     ]
 }
