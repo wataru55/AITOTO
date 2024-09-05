@@ -10,6 +10,7 @@ import PhotosUI
 
 struct PresentRegistrationView: View {
     @StateObject var viewModel = PresentRegistrationViewModel()
+    @EnvironmentObject var envViewModel: RegistrationItemViewModel
 
     @Environment(\.presentationMode) var presentationMode
 
@@ -109,6 +110,7 @@ struct PresentRegistrationView: View {
                         Task {
                             do {
                                 try await viewModel.saveToFirestore()
+                                try await envViewModel.fetchRegistrationsData()
                                 presentationMode.wrappedValue.dismiss()
                             } catch {
                                 print("Error saving registration: \(error.localizedDescription)")

@@ -13,10 +13,9 @@ class RegistrationItemViewModel: ObservableObject {
 
     init(uid: String) {
         self.uid = uid
-        fetchRegistrationsData()
     }
 
-    func fetchRegistrationsData() {
+    func fetchRegistrationsData() async throws {
         Task {
             do {
                 let registrationData = try await UserService.fetchRegistrationsDocuments(withUid: uid)

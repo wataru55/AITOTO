@@ -9,18 +9,15 @@ import SwiftUI
 import Colorful
 
 struct MainView: View {
-    let _width = UIScreen.main.bounds.width - 40
+    @StateObject var viewModel = RegistrationItemViewModel(uid: AuthService.shared.currentUser?.id ?? "")
 
-    @State var isMenuOpen = false
-    @State var currentSystemImage = "rectangle.grid.1x2"
+    @State private var isMenuOpen = false
+    @State private var currentSystemImage = "rectangle.grid.1x2"
     @State private var gridLayout: [GridItem] = Array(repeating: .init(.flexible()), count: 3)
     @State private var path: NavigationPath = NavigationPath() // ナビゲーションパス
 
-    @StateObject var viewModel: RegistrationItemViewModel
-
-    init(user: User) {
-        _viewModel = StateObject(wrappedValue: RegistrationItemViewModel(uid: user.id))
-    }
+    let _width = UIScreen.main.bounds.width - 40
+    let user: User
 
     var body: some View {
         ZStack {
@@ -68,7 +65,7 @@ struct MainView: View {
                         }
                         .frame(width: _width, height: 20)
 
-                        NavigationLink(destination: PresentRegistrationView()) {
+                        NavigationLink(destination: PresentRegistrationView().environmentObject(viewModel)) {
                             Image(systemName: "plus")
                                 .foregroundStyle(.black)
                                 .frame(width: _width, height: 55)
@@ -98,6 +95,7 @@ struct MainView: View {
                         }//scrollview
                         .navigationDestination(for: Registration.self, destination: { value in
                             PresentInfoView(path: $path, info: value)
+                                .environmentObject(viewModel)
                         })
                     }//vstack
                     .toolbar {
@@ -150,6 +148,11 @@ struct MainView: View {
             .tint(.black)
             MenuView(isOpen: $isMenuOpen)
         }//zstack
+        .onAppear {
+            Task {
+                try await viewModel.fetchRegistrationsData()
+            }
+        }
     }
 }
 
