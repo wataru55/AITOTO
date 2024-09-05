@@ -11,8 +11,8 @@ import Colorful
 struct MainView: View {
     @StateObject var viewModel = RegistrationItemViewModel(uid: AuthService.shared.currentUser?.id ?? "")
 
-    @State var isMenuOpen = false
-    @State var currentSystemImage = "rectangle.grid.1x2"
+    @State private var isMenuOpen = false
+    @State private var currentSystemImage = "rectangle.grid.1x2"
     @State private var gridLayout: [GridItem] = Array(repeating: .init(.flexible()), count: 3)
     @State private var path: NavigationPath = NavigationPath() // ナビゲーションパス
 
@@ -95,6 +95,7 @@ struct MainView: View {
                         }//scrollview
                         .navigationDestination(for: Registration.self, destination: { value in
                             PresentInfoView(path: $path, info: value)
+                                .environmentObject(viewModel)
                         })
                     }//vstack
                     .toolbar {

@@ -11,6 +11,7 @@ import SwiftUI
 
 struct PresentInfoView: View {
     @StateObject var viewModel = PresentRegistrationViewModel()
+    @EnvironmentObject var envViewModel: RegistrationItemViewModel
 
     @State private var showAlert = false // アラートの表示状態を管理する変数
     @Binding var path: NavigationPath
@@ -157,6 +158,7 @@ struct PresentInfoView: View {
                             Task {
                                 do {
                                     try await viewModel.deleteFirestoreData(documentId: info.id)
+                                    try await envViewModel.fetchRegistrationsData()
                                     path.removeLast(path.count)
                                 } catch {
                                     print("Error deleting registration: \(error.localizedDescription)")
