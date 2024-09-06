@@ -21,7 +21,7 @@ struct IconRegistrationItemView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
-                        .stroke(.black, lineWidth: 1)
+                        .stroke(.black, lineWidth: 0)
                 )
                 .clipped() // フレームを超える部分をクリップ
                 .shadow(color: .black.opacity(0.7), radius: 2, x: 0, y: 2)
