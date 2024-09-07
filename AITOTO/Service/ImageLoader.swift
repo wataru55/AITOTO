@@ -12,8 +12,9 @@ import FirebaseStorage
 struct ImageLoader {
     static func uploadImage(image: UIImage) async throws -> String? {
         guard let imageData = image.jpegData(compressionQuality: 0.5) else { return nil }
+        guard let uid = AuthService.shared.currentUser?.id else { return nil}
         let filename = NSUUID().uuidString
-        let ref = Storage.storage().reference(withPath: "/present_images/\(filename)")
+        let ref = Storage.storage().reference(withPath: "/present_images/\(uid)/\(filename)")
 
         // コンテンツタイプを設定
         let metadata = StorageMetadata()
@@ -28,5 +29,4 @@ struct ImageLoader {
             return nil
         }
     }
-    
 }
