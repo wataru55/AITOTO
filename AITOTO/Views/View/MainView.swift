@@ -74,7 +74,7 @@ struct MainView: View {
                         ScrollView(.vertical, showsIndicators: false) {
                             if currentSystemImage == "rectangle.grid.1x2" {
                                 LazyVStack {
-                                    ForEach(viewModel.RegistrationItem, id: \.self) { item in
+                                    ForEach(viewModel.RegistrationItem.sorted(by: { $0.date > $1.date }), id: \.self) { item in
                                         NavigationLink(value: item) {
                                             ListRegistrationItemView(registration: item)
                                         }
@@ -82,7 +82,7 @@ struct MainView: View {
                                 }
                             } else {
                                 LazyVGrid(columns: gridLayout) {
-                                    ForEach(viewModel.RegistrationItem, id: \.self) { item in
+                                    ForEach(viewModel.RegistrationItem.sorted(by: { $0.date > $1.date }), id: \.self) { item in
                                         NavigationLink(value: item) {
                                             IconRegistrationItemView(registration: item)
                                         }

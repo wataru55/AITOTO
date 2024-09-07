@@ -12,6 +12,13 @@ struct ListRegistrationItemView: View {
 
     let _width = UIScreen.main.bounds.width - 40
 
+    // DateFormatterを使ってDateをStringに変換
+        private var formattedDate: String {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"  // 表示フォーマットを設定
+            return dateFormatter.string(from: registration.date)
+        }
+
     var body: some View {
         AsyncImage(url: URL(string: registration.imageURL)) { image in
             image
@@ -37,7 +44,7 @@ struct ListRegistrationItemView: View {
         }
         .frame(width: _width, height: 60)
         .overlay(alignment: .topLeading) {
-            Text(registration.date)
+            Text(formattedDate)
                 .font(.footnote)
                 .foregroundStyle(.black)
                 .frame(width: _width, height: 60, alignment: .topLeading)
