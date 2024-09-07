@@ -77,7 +77,7 @@ struct PresentInfoEditView: View {
                 .padding(.bottom, 10)
                 .allowsHitTesting(isEditing)
                 .onAppear {
-                    viewModel.setDate(from: info.date)
+                    viewModel.date = info.date
                 }
 
                 //MARK: - TextFieldArea
