@@ -31,24 +31,6 @@ class PresentRegistrationViewModel: ObservableObject {
         self.displayImage = Image(uiImage: uiImage) //UIImageをImage型（SwiftUI の画像表示用オブジェクト）に変換．
     }
 
-    // 日付を"yyyy-MM-dd"形式の文字列からDate型に変換するメソッド
-    func setDate(from dateString: String) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-
-        if let newDate = dateFormatter.date(from: dateString) {
-            self.date = newDate
-        } else {
-            print("Invalid date format. Please ensure the date string is in the correct format.")
-        }
-    }
-
-    func formatDate(_ date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        return dateFormatter.string(from: date)
-    }
-
     // Firestoreにデータを保存するメソッド
     func saveToFirestore() async throws {
         guard let uid = AuthService.shared.currentUser?.id else { return }
@@ -62,10 +44,8 @@ class PresentRegistrationViewModel: ObservableObject {
             .document() // 新しいドキュメントを自動生成
 
         guard let imageUrl = try await ImageLoader.uploadImage(image: uiImage) else { return }
-
-        let formattedDate = formatDate(date)
-
-        let registration = Registration(id: userRegistrationRef.documentID, ownerUid: uid, imageURL: imageUrl, date: formattedDate, title: title, bio: bio)
+        // Date型をそのまま保存する
+        let registration = Registration(id: userRegistrationRef.documentID, ownerUid: uid, imageURL: imageUrl, date: date, title: title, bio: bio)
         guard let encodedInfo = try? Firestore.Encoder().encode(registration) else { return }
 
         try await userRegistrationRef.setData(encodedInfo)
@@ -73,7 +53,8 @@ class PresentRegistrationViewModel: ObservableObject {
         print("Registration saved successfully!")
     }
 
-    //保存内容を変更するメソッド
+
+    // 保存内容を変更するメソッド
     func updateFirestoreData(documentId: String) async throws {
         guard let uid = AuthService.shared.currentUser?.id else { return }
 
@@ -83,12 +64,11 @@ class PresentRegistrationViewModel: ObservableObject {
             .collection("registrations")
             .document(documentId)
 
-        let formattedDate = formatDate(date)
-
+        // Date型をそのまま保存する
         var updatedData: [String: Any] = [
             "title": title,
             "bio": bio,
-            "date": formattedDate
+            "date": date  // Date型をそのままFirestoreに保存
         ]
 
         if let uiImage = uiImage {
