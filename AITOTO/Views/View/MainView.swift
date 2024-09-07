@@ -14,14 +14,13 @@ struct MainView: View {
     @State private var isMenuOpen = false
     @State private var currentSystemImage = "rectangle.grid.1x2"
     @State private var gridLayout: [GridItem] = Array(repeating: .init(.flexible()), count: 3)
-    @State private var path: NavigationPath = NavigationPath() // ナビゲーションパス
 
     let _width = UIScreen.main.bounds.width - 40
     let user: User
 
     var body: some View {
         ZStack {
-            NavigationStack (path: $path) {
+            NavigationStack {
                 ZStack {
                     //background
                     LinearGradient(
@@ -75,7 +74,7 @@ struct MainView: View {
                         ScrollView(.vertical, showsIndicators: false) {
                             if currentSystemImage == "rectangle.grid.1x2" {
                                 LazyVStack {
-                                    ForEach(viewModel.RegistrationItem, id: \.self) { item in
+                                    ForEach(viewModel.RegistrationItem.sorted(by: { $0.date > $1.date }), id: \.self) { item in
                                         NavigationLink(value: item) {
                                             ListRegistrationItemView(registration: item)
                                         }
@@ -83,7 +82,7 @@ struct MainView: View {
                                 }
                             } else {
                                 LazyVGrid(columns: gridLayout) {
-                                    ForEach(viewModel.RegistrationItem, id: \.self) { item in
+                                    ForEach(viewModel.RegistrationItem.sorted(by: { $0.date > $1.date }), id: \.self) { item in
                                         NavigationLink(value: item) {
                                             IconRegistrationItemView(registration: item)
                                         }
@@ -94,7 +93,7 @@ struct MainView: View {
 
                         }//scrollview
                         .navigationDestination(for: Registration.self, destination: { value in
-                            PresentInfoView(path: $path, info: value)
+                            PresentInfoEditView(info: value)
                                 .environmentObject(viewModel)
                         })
                     }//vstack
