@@ -14,16 +14,19 @@ struct PresentRecommendationView: View {
         ZStack {
             //background
             LinearGradient(
-                    colors: [Color.customBackgroundColor1, Color.customBackgroundColor2],
-                    startPoint: .top,
-                    endPoint: .bottom
+                colors: [Color.customBackgroundColor1, Color.customBackgroundColor2],
+                startPoint: .top,
+                endPoint: .bottom
             )
             .ignoresSafeArea()
+
+            //MARK: - body
             VStack{
                 Text("PresentRecommendationView")
                     .foregroundStyle(.black)
             }//Vstack
             .navigationBarBackButtonHidden(true)
+            // MARK: - navigaitonbar
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button(action: {
@@ -32,12 +35,12 @@ struct PresentRecommendationView: View {
                         Image("logo_transparent")
                             .resizable()
                             .frame(width: 100, height: 100)
-                    })//button
-                }//toolbarItem
-            }//toolbar
-        }//zstack
-    }//body
-}//view
+                    })
+                }
+            }// toolbar
+        }// zstack
+    }// body
+}// PresentRecommendationView
 
 #Preview {
     PresentRecommendationView()
