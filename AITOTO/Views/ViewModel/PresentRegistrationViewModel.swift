@@ -8,6 +8,7 @@
 import SwiftUI
 import Firebase
 import PhotosUI
+import FirebaseStorage
 
 class PresentRegistrationViewModel: ObservableObject {
     @Published var date = Date()
@@ -84,14 +85,32 @@ class PresentRegistrationViewModel: ObservableObject {
     func deleteFirestoreData(documentId: String) async throws {
         guard let uid = AuthService.shared.currentUser?.id else { return }
 
+        // Firestore内のユーザーの`registrations`コレクションから指定されたドキュメントを参照
         let userRegistrationRef = Firestore.firestore()
             .collection("users")
             .document(uid)
             .collection("registrations")
             .document(documentId)
 
+        // ドキュメントの情報を取得し、ドキュメントが存在していればそのデータを取得
+        let document = try await userRegistrationRef.getDocument()
+
+        // ドキュメントの`imageURL`フィールドから画像URLを取得（存在する場合）
+        if let data = document.data(), let imageURL = data["imageURL"] as? String {
+            // Firebase Storageに保存された画像の参照を取得
+            let ref = Storage.storage().reference(forURL: imageURL)
+
+            // Firebase Storageから画像を削除
+            do {
+                try await ref.delete()  // Firebase Storageの画像を削除
+                print("Image deleted successfully from Firebase Storage.")  // 成功メッセージ
+            } catch {
+                // 画像削除に失敗した場合のエラーハンドリング
+                print("Error deleting image from Firebase Storage: \(error.localizedDescription)")
+            }
+        }
+
         try await userRegistrationRef.delete()
         print("Registration deleted successfully!")
     }
-
 }
