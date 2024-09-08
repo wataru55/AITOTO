@@ -13,6 +13,7 @@ struct MenuView: View {
 
     var body: some View {
         ZStack {
+            // menuViewが出てきたときに背景を暗くするため
             Color.black
                 .ignoresSafeArea(.all)
                 .opacity(isOpen ? 0.7 : 0)
@@ -22,6 +23,7 @@ struct MenuView: View {
                         isOpen.toggle()
                     }
                 }
+            //MARK: - MenuContent
             ZStack {
                 Color
                     .white
@@ -29,6 +31,7 @@ struct MenuView: View {
                     .ignoresSafeArea(edges: .bottom)
 
                 VStack{
+                    // 設定ボタン
                     Button(action: {
 
                     }, label: {
@@ -52,6 +55,7 @@ struct MenuView: View {
                     .padding(.top, 30)
                     .shadow(color: .black.opacity(0.7), radius: 2, x: 0, y: 3)
 
+                    // マイページボタン
                     Button(action: {
 
                     }, label: {
@@ -74,7 +78,8 @@ struct MenuView: View {
                     })
                     .padding(.top, 10)
                     .shadow(color: .black.opacity(0.7), radius: 2, x: 0, y: 3)
-
+                    
+                    // プランアップグレードボタン
                     Button(action: {
 
                     }, label: {
@@ -97,7 +102,8 @@ struct MenuView: View {
                     })
                     .padding(.top, 10)
                     .shadow(color: .black.opacity(0.7), radius: 2, x: 0, y: 3)
-
+                    
+                    // カスタマーサポートボタン
                     Button(action: {
 
                     }, label: {
@@ -123,7 +129,7 @@ struct MenuView: View {
 
                     Spacer()
 
-
+                    // ログアウトボタン
                     Button(action: {
                         AuthService.shared.signout()
                     }, label: {
@@ -137,16 +143,16 @@ struct MenuView: View {
                     })
                     .padding(.top, 40)
                     .shadow(color: .black.opacity(0.7), radius: 2, x: 0, y: 3)
-                }//vstack
+                }// vstack
                 .frame(width: UIScreen.main.bounds.width * 2 / 3, height: UIScreen.main.bounds.height - 100)
-            }//zstack
-            /// 画面幅の1/3だけ左側を開ける
+            }// zstack
+            // 画面幅の1/3だけ左側を開ける
             .padding(.leading, UIScreen.main.bounds.width/3)
-            /// isOpenで、そのままの位置か、画面幅だけ右にズレるかを決める
+            // isOpenで、そのままの位置か、画面幅だけ右にズレるかを決める
             .offset(x: isOpen ? 0 : UIScreen.main.bounds.width)
-        }
-    }
-}
+        }// zstack
+    } // body
+}// MenuView
 
 #Preview {
     MenuView(isOpen: .constant(true))
