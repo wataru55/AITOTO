@@ -46,7 +46,7 @@ class PresentRegistrationViewModel: ObservableObject {
 
         guard let imageUrl = try await ImageLoader.uploadImage(image: uiImage) else { return }
         // Date型をそのまま保存する
-        let registration = Registration(id: userRegistrationRef.documentID, ownerUid: uid, imageURL: imageUrl, date: date, title: title, bio: bio)
+        let registration = Registration(id: userRegistrationRef.documentID, imageURL: imageUrl, date: date, title: title, bio: bio)
         guard let encodedInfo = try? Firestore.Encoder().encode(registration) else { return }
 
         try await userRegistrationRef.setData(encodedInfo)
