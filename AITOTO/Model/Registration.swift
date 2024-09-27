@@ -10,7 +10,6 @@ import Firebase
 
 struct Registration: Identifiable, Hashable, Codable {
     let id: String
-    let ownerUid: String
     let imageURL: String
     let date: Date
     var title: String
@@ -19,6 +18,6 @@ struct Registration: Identifiable, Hashable, Codable {
 
 extension Registration {
     static var MOCK_REGISTRATIONS: [Registration] = [
-        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString,imageURL: "logo", date: Date(), title: "大好きなクマちゃん")
+        .init(id: NSUUID().uuidString,imageURL: "logo", date: Date(), title: "大好きなクマちゃん")
     ]
 }
