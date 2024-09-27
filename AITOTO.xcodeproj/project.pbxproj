@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63135D852C9F955D004137AF /* BallonTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63135D842C9F955D004137AF /* BallonTextView.swift */; };
 		63708C2B2C5A2EAC0045BBFB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C2A2C5A2EAC0045BBFB /* MenuView.swift */; };
 		63708C2D2C5BF3E50045BBFB /* PresentRecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C2C2C5BF3E40045BBFB /* PresentRecommendationView.swift */; };
 		63708C2F2C5C027A0045BBFB /* PresentRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C2E2C5C027A0045BBFB /* PresentRegistrationView.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63135D842C9F955D004137AF /* BallonTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallonTextView.swift; sourceTree = "<group>"; };
 		63708C2A2C5A2EAC0045BBFB /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		63708C2C2C5BF3E40045BBFB /* PresentRecommendationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentRecommendationView.swift; sourceTree = "<group>"; };
 		63708C2E2C5C027A0045BBFB /* PresentRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentRegistrationView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				63708C3D2C65E7CB0045BBFB /* IconRegistrationItemView.swift */,
 				63708C3B2C65E7A20045BBFB /* ListRegistrationItemView.swift */,
+				63135D842C9F955D004137AF /* BallonTextView.swift */,
 			);
 			path = Conpornents;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				63708C352C60A6E70045BBFB /* PresentRegistrationViewModel.swift in Sources */,
 				63DA886E2C4CD592000D936B /* AuthService.swift in Sources */,
 				63DA88792C4CD7F0000D936B /* ContentViewModel.swift in Sources */,
+				63135D852C9F955D004137AF /* BallonTextView.swift in Sources */,
 				63708C3C2C65E7A20045BBFB /* ListRegistrationItemView.swift in Sources */,
 				6383E8392C7D4AE20048A52F /* PresentInfoEditView.swift in Sources */,
 				63DA888C2C4CDBEB000D936B /* IGTextFieldModifier.swift in Sources */,
