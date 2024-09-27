@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		63135D852C9F955D004137AF /* BallonTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63135D842C9F955D004137AF /* BallonTextView.swift */; };
+		63135D892CA65460004137AF /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 63135D882CA65460004137AF /* FirebaseAppCheck */; };
 		63708C2B2C5A2EAC0045BBFB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C2A2C5A2EAC0045BBFB /* MenuView.swift */; };
 		63708C2D2C5BF3E50045BBFB /* PresentRecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C2C2C5BF3E40045BBFB /* PresentRecommendationView.swift */; };
 		63708C2F2C5C027A0045BBFB /* PresentRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63708C2E2C5C027A0045BBFB /* PresentRegistrationView.swift */; };
@@ -91,6 +92,7 @@
 				63708C482C6679360045BBFB /* ColorfulX in Frameworks */,
 				63DA886B2C4CD44F000D936B /* FirebaseStorage in Frameworks */,
 				63DA88672C4CD44F000D936B /* FirebaseFirestore in Frameworks */,
+				63135D892CA65460004137AF /* FirebaseAppCheck in Frameworks */,
 				63708C452C6678070045BBFB /* Colorful in Frameworks */,
 				63DA88692C4CD44F000D936B /* FirebaseFirestoreSwift in Frameworks */,
 			);
@@ -289,6 +291,7 @@
 				63DA886A2C4CD44F000D936B /* FirebaseStorage */,
 				63708C442C6678070045BBFB /* Colorful */,
 				63708C472C6679360045BBFB /* ColorfulX */,
+				63135D882CA65460004137AF /* FirebaseAppCheck */,
 			);
 			productName = AITOTO;
 			productReference = 63DA884D2C4A1910000D936B /* AITOTO.app */;
@@ -614,6 +617,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		63135D882CA65460004137AF /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63DA88632C4CD44F000D936B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
 		63708C442C6678070045BBFB /* Colorful */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 63708C432C6678070045BBFB /* XCRemoteSwiftPackageReference "Colorful" */;
